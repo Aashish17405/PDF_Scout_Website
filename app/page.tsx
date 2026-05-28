@@ -49,12 +49,12 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-10">
           <div className="inline-flex items-center gap-3">
             <Image
-              src="/extension-logo.png"
+              src="/extension-logo.svg"
               alt="PDF Scout logo"
               width={32}
               height={32}
               className="rounded-md"
-              style={{ height: "auto" }}
+              style={{ width: "auto", height: "auto" }}
               priority
             />
             <p className="text-sm font-semibold text-[var(--foreground)]">
@@ -135,17 +135,25 @@ export default function Home() {
           <h2 className="mb-5 text-2xl font-semibold text-[var(--foreground)] sm:text-3xl">
             See PDF Scout in action
           </h2>
-          <div className="overflow-hidden rounded-2xl border border-[var(--line)]">
-            <div className="aspect-video w-full">
-              <iframe
-                id="walkthrough-video"
-                className="h-full w-full"
-                src="https://www.youtube.com/embed/rSFDQ7wLyIo?si=6r7w0OpQHSJI4LDg"
-                title="PDF Scout extension walkthrough"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
+          <div className="overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--line)]/10 p-6">
+            <div className="flex aspect-video w-full flex-col items-center justify-center gap-5 rounded-xl border border-[var(--line)] bg-[var(--surface)]">
+              <Image
+                src="/extension-logo.svg"
+                alt="PDF Scout demo preview"
+                width={72}
+                height={72}
+                style={{ width: "auto", height: "auto" }}
               />
+              <a
+                href={walkthroughUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-analytics-event="cta_click"
+                data-analytics-label="demo_watch_on_youtube"
+                className="rounded-xl bg-[var(--brand)] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[var(--brand-deep)]"
+              >
+                Watch Walkthrough on YouTube
+              </a>
             </div>
           </div>
         </div>
