@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
-import { AnalyticsTracker } from "./components/analytics-tracker";
 import { SmoothScroll } from "./components/smooth-scroll";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next"
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://pdf-scout.vercel.app";
-const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -67,23 +65,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
       <body className="min-h-full flex flex-col">
-        {gaId ? (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-              strategy="afterInteractive"
-            />
-            <Script id="ga-init" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                window.gtag = gtag;
-                gtag('js', new Date());
-                gtag('config', '${gaId}');
-              `}
-            </Script>
-          </>
-        ) : null}
         <script
           dangerouslySetInnerHTML={{
             __html: `(() => {
@@ -102,8 +83,8 @@ export default function RootLayout({
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
-        <AnalyticsTracker />
         <SmoothScroll />
+        <Analytics />
         {children}
       </body>
     </html>
