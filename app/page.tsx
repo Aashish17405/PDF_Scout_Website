@@ -49,12 +49,11 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-10">
           <div className="inline-flex items-center gap-3">
             <Image
-              src="/extension-logo.svg"
+              src="/extension-logo-32.png"
               alt="PDF Scout logo"
               width={32}
               height={32}
               className="rounded-md"
-              style={{ width: "auto", height: "auto" }}
               priority
             />
             <p className="text-sm font-semibold text-[var(--foreground)]">
@@ -138,11 +137,10 @@ export default function Home() {
           <div className="overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--line)]/10 p-6">
             <div className="flex aspect-video w-full flex-col items-center justify-center gap-5 rounded-xl border border-[var(--line)] bg-[var(--surface)]">
               <Image
-                src="/extension-logo.svg"
+                src="/extension-logo-48.png"
                 alt="PDF Scout demo preview"
-                width={72}
-                height={72}
-                style={{ width: "auto", height: "auto" }}
+                width={48}
+                height={48}
               />
               <a
                 href={walkthroughUrl}
