@@ -40,9 +40,9 @@ export const metadata: Metadata = {
     images: ["/twitter-image"],
   },
   icons: {
-    icon: "/extension-logo.png",
-    shortcut: "/extension-logo.png",
-    apple: "/extension-logo.png",
+    icon: "/extension-logo.svg",
+    shortcut: "/extension-logo.svg",
+    apple: "/extension-logo.svg",
   },
   robots: {
     index: true,

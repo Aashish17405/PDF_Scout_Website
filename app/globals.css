@@ -1,64 +1,44 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f4f1eb;
-  --foreground: #1f1a17;
-  --surface: #fffdf9;
-  --muted: #5f5146;
-  --brand: #cf5f38;
-  --brand-deep: #9e3d1c;
-  --line: #ead7c8;
-  --paper-1: #fff9f1;
-  --paper-2: #f7e8da;
-  --paper-3: #f6f2ed;
-  --paper-4: #f3ede6;
-  --grain-dot: rgba(70, 52, 39, 0.05);
+  --background: #f7f8fb;
+  --foreground: #111827;
+  --surface: #ffffff;
+  --muted: #4b5563;
+  --brand: #2563eb;
+  --brand-deep: #1d4ed8;
+  --line: #dbe2ec;
 }
 
 :root[data-theme="dark"] {
-  --background: #0f1114;
-  --foreground: #eef2f7;
-  --surface: #171b22;
-  --muted: #a8b3c2;
-  --brand: #f07a4e;
-  --brand-deep: #d35d34;
-  --line: #2a3340;
-  --paper-1: #1a1e25;
-  --paper-2: #232934;
-  --paper-3: #10141b;
-  --paper-4: #0d1117;
-  --grain-dot: rgba(231, 239, 255, 0.06);
+  --background: #0b1220;
+  --foreground: #eef2ff;
+  --surface: #141d31;
+  --muted: #9ca9c9;
+  --brand: #60a5fa;
+  --brand-deep: #3b82f6;
+  --line: #24324f;
 }
 
 :root[data-theme="light"] {
-  --background: #f4f1eb;
-  --foreground: #1f1a17;
-  --surface: #fffdf9;
-  --muted: #5f5146;
-  --brand: #cf5f38;
-  --brand-deep: #9e3d1c;
-  --line: #ead7c8;
-  --paper-1: #fff9f1;
-  --paper-2: #f7e8da;
-  --paper-3: #f6f2ed;
-  --paper-4: #f3ede6;
-  --grain-dot: rgba(70, 52, 39, 0.05);
+  --background: #f7f8fb;
+  --foreground: #111827;
+  --surface: #ffffff;
+  --muted: #4b5563;
+  --brand: #2563eb;
+  --brand-deep: #1d4ed8;
+  --line: #dbe2ec;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     --background: #0f1114;
-    --foreground: #eef2f7;
-    --surface: #171b22;
-    --muted: #a8b3c2;
-    --brand: #f07a4e;
-    --brand-deep: #d35d34;
-    --line: #2a3340;
-    --paper-1: #1a1e25;
-    --paper-2: #232934;
-    --paper-3: #10141b;
-    --paper-4: #0d1117;
-    --grain-dot: rgba(231, 239, 255, 0.06);
+    --foreground: #eef2ff;
+    --surface: #141d31;
+    --muted: #9ca9c9;
+    --brand: #60a5fa;
+    --brand-deep: #3b82f6;
+    --line: #24324f;
   }
 }
 
@@ -113,10 +93,7 @@ iframe:focus-visible {
 }
 
 .paper-bg {
-  background:
-    radial-gradient(circle at 10% 5%, var(--paper-1) 0%, transparent 40%),
-    radial-gradient(circle at 85% 25%, var(--paper-2) 0%, transparent 45%),
-    linear-gradient(180deg, var(--paper-3) 0%, var(--paper-4) 100%);
+  background: var(--background);
 }
 
 .grain-overlay {
@@ -124,13 +101,7 @@ iframe:focus-visible {
 }
 
 .grain-overlay::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.2;
-  background-image: radial-gradient(var(--grain-dot) 0.5px, transparent 0.5px);
-  background-size: 3px 3px;
+  content: none;
 }
 
 .reveal-up {
